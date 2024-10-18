@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PC2 :: Pregunta 6</title>
+  </head>
+  <body>
+    <h1>Carrito de Compras</h1>
+
+    <div>
+      <h2>Agregar Producto</h2>
+
+      <label for="productName">Nombre del Producto:</label>
+      <input type="text" id="productName" placeholder="Nombre del producto" />
+
+      <br />
+
+      <label for="productPrice">Precio del Producto:</label>
+      <input
+        type="number"
+        id="productPrice"
+        placeholder="Precio del producto"
+      />
+
+      <br />
+
+      <button onclick="addProduct()">Agregar al Carrito</button>
+    </div>
+
+    <div>
+      <h2>Eliminar Producto</h2>
+
+      <label for="removeProductName">Nombre del Producto a Eliminar:</label>
+      <input
+        type="text"
+        id="removeProductName"
+        placeholder="Nombre del producto"
+      />
+
+      <br />
+
+      <button onclick="removeProduct()">Eliminar del Carrito</button>
+    </div>
+
+    <br />
+
+    <hr />
+
+    <h2>Resumen de compra</h2>
+    <ul id="cartItems"></ul>
+
+    <p>- Subtotal 1 (Suma de importes): S/. <span id="subtotal1">0</span></p>
+    <p>- Descuento (10% del Subtotal 1): S/. <span id="discount">0</span></p>
+    <p>
+      - Subtotal 2 (Subtotal 1 - Descuento): S/. <span id="subtotal2">0</span>
+    </p>
+    <p>- IGV (18% del Subtotal 2): S/. <span id="igv">0</span></p>
+    <h3>Total a Pagar (Subtotal 2 + IGV): S/. <span id="total">0</span></h3>
+
+    <script src="carrito.js"></script>
+  </body>
+</html>
